@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Coinflip game</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Coinflip Dapp</h1>
+        <p class="lead">Choose your pick, either Head or Tail. Bet with at least 1 ether. You will get double bets back if you win, otherwise you just lost you bet.  </p>
+      </div>
+    </div>
+    <div class="container">
+      <form>
+        <h2>Choose your pick and bet</h2>
+        <div class="input-group mb-3">
+          <input type="radio" name="coin" id="head_check" value="0" checked>
+          <label for="head_check"> <p>Head</p></label><br>
+        </div>
+        <div class="input-group mb-3">
+          <input type="radio" name="coin"  id="tail_check" value="1" >
+          <label for="tail_check"> <p>Tail </p> </label>
+        </div>
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" id="bet_input" placeholder="How many ether to bet?" >
+          <br><br>
+        </div>
+        <div id="log"></div>
+        <input type="submit" value = "Submit" id="playBet"><br>
+        <button type="button" id="add_data_button" class="btn btn-primary">Add Data</button>
+      </form>
+      <div>
+        <br><h2>Get Your bet</h2>
+        <button type="button" id="get_your_bet" class="btn btn-primary">Get bet</button>
+      </div>
+    </div>
+
+
+  </body>
+</html>
